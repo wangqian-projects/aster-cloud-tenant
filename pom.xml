@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xmlns="http://maven.apache.org/POM/4.0.0"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.github.wangqian-projects</groupId>
+		<artifactId>aster-cloud-build</artifactId>
+		<version>0.0.1</version>
+	</parent>
+
+	<artifactId>aster-cloud-tenant</artifactId>
+	<version>0.0.1</version>
+
+	<packaging>pom</packaging>
+	<name>Aster Cloud Tenant Parent</name>
+	<description>Aster Cloud Tenant Parent</description>
+
+	<url>https://github.com/wangqian-projects/aster-cloud-tenant</url>
+
+	<modules>
+		<module>aster-cloud-tenant-dependencies</module>
+		<module>aster-cloud-tenant-core</module>
+		<module>aster-cloud-starter-tenant</module>
+	</modules>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- aster cloud starters 依赖 -->
+			<dependency>
+				<groupId>com.github.wangqian-projects</groupId>
+				<artifactId>aster-cloud-tenant-dependencies</artifactId>
+				<version>${project.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<!-- aster cloud commons 依赖 -->
+			<dependency>
+				<groupId>com.github.wangqian-projects</groupId>
+				<artifactId>aster-cloud-commons-dependencies</artifactId>
+				<version>${project.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+
+</project>
